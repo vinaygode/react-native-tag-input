@@ -182,7 +182,7 @@ class TagInput<T> extends React.PureComponent<Props<T>, State> {
     }
   }
 
-  componentWillUpdate(nextProps: Props<T>, nextState: State) {
+  UNSAFE_componentWillUpdate(nextProps: Props<T>, nextState: State) {
     if (
       this.props.onHeightChange &&
       nextState.wrapperHeight !== this.state.wrapperHeight
