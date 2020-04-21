@@ -166,7 +166,7 @@ class TagInput<T> extends React.PureComponent<Props<T>, State> {
     };
   }
 
-  componentWillReceiveProps(nextProps: Props<T>) {
+  UNSAFE_componentWillReceiveProps(nextProps: Props<T>) {
     const inputWidth = TagInput.inputWidth(
       nextProps.text,
       this.spaceLeft,
@@ -384,7 +384,7 @@ class Tag extends React.PureComponent<TagProps> {
   };
   curPos: ?number = null;
 
-  componentWillReceiveProps(nextProps: TagProps) {
+  UNSAFE_componentWillReceiveProps(nextProps: TagProps) {
     if (
       !this.props.isLastTag &&
       nextProps.isLastTag &&
