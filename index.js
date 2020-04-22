@@ -397,7 +397,6 @@ class Tag extends React.PureComponent<TagProps> {
 
   render() {
     let tagLabel;
-    const xLabel = this.props.editable ? "&nbsp;&times;" : "";
     if (React.isValidElement(this.props.label)) {
       tagLabel = this.props.label;
     } else {
@@ -410,7 +409,7 @@ class Tag extends React.PureComponent<TagProps> {
           ]}
         >
           {this.props.label}
-          {xLabel}
+          {this.props.editable ? "\x20\xD7" : ""}
         </Text>
       );
     }
